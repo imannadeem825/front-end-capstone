@@ -1,0 +1,33 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "Already Gone",
+            "feel": "power ballad",
+            "lyricSummary": "accepting that friends will come and go, and you can't make them stay",
+            "startDate": "9/2011",
+            "completionDateGoal": "6/2016",
+            "progress": "verses need some work",
+            "productionGoals": "references: Paramore RIOT!, There For Tomorrow The Verge",
+            "cowriters": "SueAnn Shiah"
+        }
+    ],
+    "demos": [
+        {
+            "id": 1,
+            "songId": 1,
+            "mixComplete": true,
+            "masterComplete": true,
+            "notes": "no further notes"
+        }
+    ],
+    "tracks": [
+        {
+            "id": 1,
+            "demoId": 1,
+            "trackTitle": "rhythm guitar",
+            "timeToComplete": "3 hours",
+            "isComplete": true
+        }
+    ]
+}
