@@ -29,5 +29,13 @@
             "timeToComplete": "3 hours",
             "isComplete": true
         }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Iman",
+            "lastName": "Nadeem",
+            "email": "iman@iman.com"
+        }
     ]
 }
