@@ -23,9 +23,26 @@ export const SongProvider = (props) => {
         .then(response => response.json())
     }
 
+    //COME BACK TO THIS
+    const getSongById = (id) => {
+        return fetch(`http://localhost:8088/songs/${id}`)
+            .then(res => res.json())
+    }
+
+    const updateSong = song => {
+        return fetch(`http://localhost:8088/songs/${song.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(song)
+        })
+          .then(getSongs)
+      }
+
     return (
      <SongContext.Provider value={{
-        songs, addSong, getSongs
+        songs, addSong, getSongs, getSongById, updateSong
         }}>
             {props.children}
     </SongContext.Provider>
