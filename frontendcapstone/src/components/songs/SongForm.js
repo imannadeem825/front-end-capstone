@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
 import { SongContext } from "./SongProvider"
 import "./Song.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const SongForm = () => {
-    const { songs, addSong, getSongs } = useContext(SongContext)
+    const { addSong, getSongs, updateSong, getSongById } = useContext(SongContext)
 
     const [song, setSong] = useState({
       title: "",
@@ -17,12 +17,11 @@ export const SongForm = () => {
       cowriters: ""
     });
 
+    
+    const {songId} = useParams()
     const history = useHistory();
 
-    useEffect(() => {
-      getSongs()
-    }, [])
-
+ 
     const handleControlledInputChange = (event) => {
 
       const newSong = { ...song }
@@ -35,29 +34,58 @@ export const SongForm = () => {
       setSong(newSong)
     }
 
-    const handleClickSaveSong = (event) => {
-      event.preventDefault() 
+    useEffect(() => {
+        getSongs().then(() => {
+            if (songId) {
+                getSongById(songId)
+                .then(song => {
+                    setSong(song)
+                })
+            }
+        })
+      }, [])
 
-      const title = song.title
-      const feel = song.feel
-      const lyricSummary = song.lyricSummary
-      const startDate = song.startDate
-      const completionDateGoal = song.completionDateGoal
-      const progress = song.progress
-      const productionGoals = song.productionGoals
-      const cowriters = song.cowriters
+    const handleSaveSong = (event) => {
+      
 
-      if (title === "" || feel === "" || lyricSummary === "" || startDate === "" || completionDateGoal === "" || progress === "" || productionGoals === "" || cowriters === "") {
+      if (song.title === "" || song.feel === "" || song.lyricSummary === "" || song.startDate === "" || song.completionDateGoal === "" || song.progress === "" || song.productionGoals === "" || song.cowriters === "") {
         window.alert("Please add details of song")
       } else {
-        addSong(song)
-        .then(() => history.push("/songs/create"))
+          if (songId) {
+              updateSong({
+                  id: song.id,
+                  title: song.title,
+                  feel: song.feel,
+                  lyricSummary: song.lyricSummary,
+                  startDate: song.startDate,
+                  completionDateGoal: song.completionDateGoal,
+                  progress: song.progress,
+                  productionGoals: song.productionGoals,
+                  cowriters: song.cowriters
+              })
+              .then(() => history.push(`/songs/detail/${song.id}`))
+          } else {
+              addSong({
+                title: song.title,
+                feel: song.feel,
+                lyricSummary: song.lyricSummary,
+                startDate: song.startDate,
+                completionDateGoal: song.completionDateGoal,
+                progress: song.progress,
+                productionGoals: song.productionGoals,
+                cowriters: song.cowriters
+              })
+              .then(() => history.push("/songs"))
+          }
+
+       
       }
     }
 
+
     return (
       <form className="songForm">
-          <h2 className="songForm__title">Add New Song</h2>
+          <h2 className="songForm__title">{songId ? "Edit Song" : "Add A Song"}</h2>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="title">Song Title:</label>
@@ -107,8 +135,11 @@ export const SongForm = () => {
               </div>
           </fieldset>
             <button className="btn btn-primary"
-                onClick={handleClickSaveSong}>
-                Save Song
+                onClick={event => {
+                    event.preventDefault()
+                    handleSaveSong()
+                }}>
+                {songId ? "Save Song" : "Add Song"}
             </button>
       </form>
     )
