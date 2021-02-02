@@ -7,12 +7,12 @@ export const SongProvider = (props) => {
     const [songs, setSongs] = useState([])
 
     const getSongs = () => {
-        return fetch("http://localhost:8080/songs")
+        return fetch("http://localhost:8088/songs")
         .then(res => res.json())
         .then(setSongs)
     }
 
-    const addSong = locationObj => {
+    const addSong = songObj => {
         return fetch("http://localhost:8088/songs", {
             method: "POST",
             headers: {

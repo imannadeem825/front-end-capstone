@@ -1,33 +1,52 @@
 {
-    "songs": [
-        {
-            "id": 1,
-            "title": "Already Gone",
-            "feel": "power ballad",
-            "lyricSummary": "accepting that friends will come and go, and you can't make them stay",
-            "startDate": "9/2011",
-            "completionDateGoal": "6/2016",
-            "progress": "verses need some work",
-            "productionGoals": "references: Paramore RIOT!, There For Tomorrow The Verge",
-            "cowriters": "SueAnn Shiah"
-        }
-    ],
-    "demos": [
-        {
-            "id": 1,
-            "songId": 1,
-            "mixComplete": true,
-            "masterComplete": true,
-            "notes": "no further notes"
-        }
-    ],
-    "tracks": [
-        {
-            "id": 1,
-            "demoId": 1,
-            "trackTitle": "rhythm guitar",
-            "timeToComplete": "3 hours",
-            "isComplete": true
-        }
-    ]
+  "songs": [
+    {
+      "id": 1,
+      "title": "Already Gone",
+      "feel": "power ballad",
+      "lyricSummary": "accepting that friends will come and go, and you can't make them stay",
+      "startDate": "9/2011",
+      "completionDateGoal": "6/2016",
+      "progress": "verses need some work",
+      "productionGoals": "references: Paramore RIOT!, There For Tomorrow The Verge",
+      "cowriters": "SueAnn Shiah"
+    },
+    {
+      "title": "test",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 2
+    }
+  ],
+  "demos": [
+    {
+      "id": 1,
+      "songId": 1,
+      "mixComplete": true,
+      "masterComplete": true,
+      "notes": "no further notes"
+    }
+  ],
+  "tracks": [
+    {
+      "id": 1,
+      "demoId": 1,
+      "trackTitle": "rhythm guitar",
+      "timeToComplete": "3 hours",
+      "isComplete": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Iman",
+      "lastName": "Nadeem",
+      "email": "iman@iman.com"
+    }
+  ]
 }

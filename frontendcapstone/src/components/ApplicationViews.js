@@ -1,15 +1,19 @@
-// import React from "react"
-// import { Route } from "react-router-dom"
+import React from "react"
+import { Route } from "react-router-dom"
 
-// import { LocationProvider } from "./locations/LocationProvider"
-// import { LocationList } from "./locations/LocationList"
+import { SongProvider } from "./songs/SongProvider"
+import { SongList } from "./songs/SongList"
+import { SongForm } from "./songs/SongForm"
 
-// export const ApplicationViews = () => {
-//     return (
-//         <LocationProvider>
-//             <Route exact path="/locations">
-//                 <LocationList />
-//             </Route>
-//         </LocationProvider>
-//     )
-// }
+export const ApplicationViews = () => {
+    return (
+        <SongProvider>
+            <Route exact path="/songs">
+                <SongList />
+            </Route>
+            <Route path="/songs/create">
+                <SongForm />
+            </Route>
+        </SongProvider>
+    )
+}
