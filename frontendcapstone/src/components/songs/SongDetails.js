@@ -4,12 +4,19 @@ import "./Song.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const SongDetails = () => {
-  const { getSongById } = useContext(SongContext)
+  const { getSongById, deleteSong } = useContext(SongContext)
 
 	const [song, setSong] = useState({})
 
 	const {songId} = useParams();
-	const history = useHistory();
+    const history = useHistory();
+    
+    const handleDelete = () => {
+        deleteSong(song.id)
+          .then(() => {
+            history.push("/songs")
+          })
+      }
 
   useEffect(() => {
     console.log("useEffect", songId)
@@ -32,6 +39,7 @@ export const SongDetails = () => {
         <button onClick={() => {
             history.push(`/songs/edit/${song.id}`)}}>Edit
         </button>
+        <button onClick={handleDelete}>Delete Song</button>
     </section>
   )
 }
