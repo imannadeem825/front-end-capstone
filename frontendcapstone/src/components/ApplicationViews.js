@@ -6,8 +6,14 @@ import { SongList } from "./songs/SongList"
 import { SongForm } from "./songs/SongForm"
 import { SongDetails } from "./songs/SongDetails"
 
+import { DemoProvider } from "./demos/DemoProvider"
+import { DemoList } from "./demos/DemoList"
+import { DemoForm } from "./demos/DemoForm"
+import { DemoDetails } from "./demos/DemoDetails"
+
 export const ApplicationViews = () => {
     return (
+        <>
         <SongProvider>
             <Route exact path="/songs">
                 <SongList />
@@ -22,6 +28,24 @@ export const ApplicationViews = () => {
                 <SongDetails />
             </Route>
         </SongProvider>
+        <SongProvider>
+            <DemoProvider>
+                <Route exact path="/demos">
+                    <DemoList />
+                </Route>
+                <Route path="/demos/create">
+                    <DemoForm />
+                </Route> 
+                <Route exact path="/demos/edit/:demoId(\d+)">
+                    <DemoForm />
+                </Route>
+                <Route exact path="/demos/detail/:demoId(\d+)">
+                    <DemoDetails />
+                </Route>
+            </DemoProvider>
+        </SongProvider>
+        
+      </>
     )
 }
 

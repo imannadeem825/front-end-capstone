@@ -38,6 +38,8 @@
     {
       "id": 1,
       "songId": 1,
+      "startDate": "7/2016",
+      "completionDateGoal": "8/2016",
       "mixComplete": true,
       "masterComplete": true,
       "notes": "no further notes"

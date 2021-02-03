@@ -6,7 +6,7 @@ import { useParams, useHistory } from "react-router-dom"
 export const SongDetails = () => {
   const { getSongById, deleteSong } = useContext(SongContext)
 
-	const [song, setSong] = useState({})
+    const [song, setSong] = useState({})
 
 	const {songId} = useParams();
     const history = useHistory();
