@@ -1,7 +1,6 @@
 import React, { useState, createContext } from "react"
-
-
 export const SongContext = createContext()
+
 
 export const SongProvider = (props) => {
     const [songs, setSongs] = useState([])
@@ -23,7 +22,6 @@ export const SongProvider = (props) => {
         .then(response => response.json())
     }
 
-    //COME BACK TO THIS
     const getSongById = (id) => {
         return fetch(`http://localhost:8088/songs/${id}`)
             .then(res => res.json())
@@ -40,24 +38,19 @@ export const SongProvider = (props) => {
           .then(getSongs)
       }
 
+      const deleteSong = songId => {
+        return fetch(`http://localhost:8088/songs/${songId}`, {
+            method: "DELETE"
+        })
+            .then(getSongs)
+    }
+
     return (
      <SongContext.Provider value={{
-        songs, addSong, getSongs, getSongById, updateSong
+        songs, addSong, getSongs, getSongById, updateSong, deleteSong
         }}>
             {props.children}
     </SongContext.Provider>
     )
 }
 
-   // const getLocationById = (id) => {
-    //     return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
-    //         .then(res => res.json())
-    // }
-
-    // return (
-    //     <LocationContext.Provider value={{
-    //        locations, addLocation, getLocations, getLocationById
-    //        }}>
-    //            {props.children}
-    //    </LocationContext.Provider>
-    //    )
