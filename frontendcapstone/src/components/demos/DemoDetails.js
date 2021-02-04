@@ -7,7 +7,6 @@ export const DemoDetails = () => {
   const { getDemoById, deleteDemo } = useContext(DemoContext)
 
     const [demo, setDemo] = useState({})
-
 	const {demoId} = useParams();
     const history = useHistory();
     
@@ -28,7 +27,7 @@ export const DemoDetails = () => {
 
   return (
     <section className="demo">
-        <h3 className="demo__title">Title: {demo.title}</h3>
+        <h3 className="demo__title">Title: {demo.song?.title}</h3>
         <div className="demo__startDate">Start Date: {demo.startDate}</div>
         <div className="demo__completionDateGoal">Completion Date Goal: {demo.completionDateGoal}</div>
         <div className="demo__mixComplete">Mix Complete: {demo.mixComplete}</div>
@@ -43,3 +42,6 @@ export const DemoDetails = () => {
 }
 
 //add track button^
+//<button onClick={() => {history.push("/tracks/create")}}>
+// Add A Track
+// </button>

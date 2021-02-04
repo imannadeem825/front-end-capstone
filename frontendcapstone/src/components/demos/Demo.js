@@ -8,7 +8,7 @@ export const Demo = ({ demo }) => {
     <section className="demo">
       <h3 className="demo__title">
         <Link to={`/demos/detail/${demo.id}`}>
-          { demo.title }
+          { demo.song?.title }
         </Link>
       </h3>
       <div className="demo__startDate">Start Date: {demo.startDate}</div>
