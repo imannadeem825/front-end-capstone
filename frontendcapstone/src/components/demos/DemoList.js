@@ -1,21 +1,19 @@
 import React, { useContext, useEffect } from "react"
-import { useHistory } from "react-router-dom"
 import { DemoContext } from "./DemoProvider"
 import { SongContext } from "../songs/SongProvider"
 import { Demo } from "./Demo"
 import "./Demo.css"
 
+
 export const DemoList = () => {
+
   const { demos, getDemos } = useContext(DemoContext)
-  const { songs, getSongs } = useContext(SongContext)
+  const { songs } = useContext(SongContext)
 
   useEffect(() => {
     console.log("DemoList: useEffect - getDemos")
     getDemos()
-
   }, [])
-
-  const history = useHistory()
 
   return (
     <div className="demos">
@@ -30,9 +28,4 @@ export const DemoList = () => {
     </div>
   )
 }
-
-
-// animals.map(animal => {
-//     const owner = customers.find(c => c.id === animal.customerId)
-//     return <AnimalCard key={animal.id} animal={animal} owner={owner}
 

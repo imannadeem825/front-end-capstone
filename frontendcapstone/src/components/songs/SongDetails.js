@@ -9,13 +9,12 @@ import { DemoDetails } from "../demos/DemoDetails"
 
 
 export const SongDetails = () => {
+
   const { getSongById, deleteSong } = useContext(SongContext)
-
-
   const [song, setSong] = useState({})
-
   const { songId } = useParams();
   const history = useHistory();
+  
 
   const handleDelete = () => {
     deleteSong(song.id)
@@ -24,6 +23,7 @@ export const SongDetails = () => {
       })
   }
 
+
   useEffect(() => {
     console.log("useEffect", songId)
     getSongById(songId)
@@ -31,6 +31,7 @@ export const SongDetails = () => {
         setSong(response)
       })
   }, [])
+
 
   return (
     <section className="song">

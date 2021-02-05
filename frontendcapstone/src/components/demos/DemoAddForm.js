@@ -1,12 +1,16 @@
 import React, { useContext, useEffect, useState } from "react"
 import { DemoContext } from "./DemoProvider"
-import { SongContext } from "../songs/SongProvider"
 import "./Demo.css"
 import { useHistory, useParams } from 'react-router-dom';
 
+
+
 export const DemoAddForm = () => {
-    const { addDemo, getDemos, updateDemo, getDemoById } = useContext(DemoContext)
-    const { songs, getSongs, getSongById } = useContext(SongContext)
+
+    const { addDemo } = useContext(DemoContext)
+    const { songId } = useParams()
+    const history = useHistory();
+
 
     const [demo, setDemo] = useState({
         song: {},
@@ -16,10 +20,6 @@ export const DemoAddForm = () => {
         masterComplete: false,
         notes: ""
     });
-
-
-    const { songId } = useParams()
-    const history = useHistory();
 
 
     const handleControlledInputChange = (event) => {
@@ -32,7 +32,6 @@ export const DemoAddForm = () => {
         }
         newDemo[event.target.id] = selectedVal
         setDemo(newDemo)
-
     }
 
 
@@ -42,14 +41,8 @@ export const DemoAddForm = () => {
         setDemo(newDemo)
     }
 
-    // Add dependency on songs for if/then statement (see animalform)
 
-    // Goal: make completion value be true or false (boolean)
-    // if/then--
-    // if checkbox is checked, then completion is true
-    // if checkbox is not checked, then completion is false
     const handleSaveDemo = (event) => {
-
 
         if (demo.completionDateGoal === "" || demo.startDate === "" || demo.notes === "") {
             window.alert("Please add details of demo")
@@ -66,16 +59,10 @@ export const DemoAddForm = () => {
         }
     }
 
-    //add mastercomplete, check if id needs to be more specific for demo vs song on completionDateGoal and startDate
-    //possibly add if statement to have h3 of song title when on the edit demo page (delete edit demo title)
-    //song.demoId ? edit demo : add a demo
-    //change ERD so it's a 1-1 ratio, add demoId to song object
-    //currently, edit demo is always showing up because there is a song id by default in the url
-    //add song, edit song, delete song and edit demo are working; add demo is not
+
     return (
         <form className="demoForm">
             <h2 className="demoForm__title">Add A Demo</h2>
-
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="startDate">Start Date:</label>
@@ -118,18 +105,7 @@ export const DemoAddForm = () => {
 }
 
 
-// useEffect(() => {
-//     if (songId) {
-//         getSongById(demoId).then(demo => {
-//             setDemo(demo)
-//             console.log(demo)
-//         })
-//     }
-// }, [])
 
-{/* <fieldset>
-<div className="form-group">
-    <label htmlFor="title">Demo Title:</label>
-    <div>{demo.song.title}</div>
-</div>
-</fieldset> */}
+//possibly add if statement to have h3 of song title when on the edit demo page (delete edit demo title)
+//song.demoId ? edit demo : add a demo
+//change ERD so it's a 1-1 ratio, add demoId to song object

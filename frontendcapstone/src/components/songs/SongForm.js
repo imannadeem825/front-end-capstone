@@ -3,8 +3,14 @@ import { SongContext } from "./SongProvider"
 import "./Song.css"
 import { useHistory, useParams } from 'react-router-dom';
 
+
+
 export const SongForm = () => {
+
     const { addSong, getSongs, updateSong, getSongById } = useContext(SongContext)
+    const {songId} = useParams()
+    const history = useHistory();
+
 
     const [song, setSong] = useState({
       title: "",
@@ -16,10 +22,6 @@ export const SongForm = () => {
       productionGoals: "",
       cowriters: ""
     });
-
-    
-    const {songId} = useParams()
-    const history = useHistory();
 
  
     const handleControlledInputChange = (event) => {
@@ -33,6 +35,7 @@ export const SongForm = () => {
       newSong[event.target.id] = selectedVal
       setSong(newSong)
     }
+
 
     useEffect(() => {
         getSongs().then(() => {
@@ -77,8 +80,6 @@ export const SongForm = () => {
               })
               .then(() => history.push("/songs"))
           }
-
-       
       }
     }
 

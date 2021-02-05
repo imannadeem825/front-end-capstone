@@ -5,7 +5,10 @@ import { Song } from "./Song"
 import "./Song.css"
 
 export const SongList = () => {
+
   const { songs, getSongs } = useContext(SongContext)
+  const history = useHistory()
+
 
   useEffect(() => {
     console.log("SongList: useEffect - getSongs")
@@ -13,7 +16,6 @@ export const SongList = () => {
 
   }, [])
 
-  const history = useHistory()
 
   return (
     <div className="songs">

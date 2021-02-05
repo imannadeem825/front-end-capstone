@@ -4,8 +4,8 @@ import "./Demo.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const DemoDetails = () => {
+  
   const { getDemoById, deleteDemo } = useContext(DemoContext)
-
   const [demo, setDemo] = useState({})
   const { demoId } = useParams();
   const history = useHistory();

@@ -42,7 +42,7 @@
       "completionDateGoal": "8/2016",
       "mixComplete": true,
       "masterComplete": true,
-      "notes": "no further notes!!"
+      "notes": "no further notes"
     },
     {
       "id": 5,
@@ -52,6 +52,15 @@
       "mixComplete": false,
       "masterComplete": false,
       "notes": "test"
+    },
+    {
+      "songId": 4,
+      "startDate": "freeee",
+      "completionDateGoal": "fallin",
+      "mixComplete": true,
+      "masterComplete": true,
+      "notes": "free fallin",
+      "id": 6
     }
   ],
   "tracks": [
