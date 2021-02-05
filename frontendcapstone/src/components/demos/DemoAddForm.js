@@ -4,22 +4,21 @@ import { SongContext } from "../songs/SongProvider"
 import "./Demo.css"
 import { useHistory, useParams } from 'react-router-dom';
 
-export const DemoForm = () => {
+export const DemoAddForm = () => {
     const { addDemo, getDemos, updateDemo, getDemoById } = useContext(DemoContext)
-    const { songs, getSongs } = useContext(SongContext)
+    const { songs, getSongs, getSongById } = useContext(SongContext)
 
     const [demo, setDemo] = useState({
-        songId: 0,
         song: {},
         startDate: "",
         completionDateGoal: "",
-        mixComplete: "",
-        masterComplete: "",
+        mixComplete: false,
+        masterComplete: false,
         notes: ""
     });
 
 
-    const { demoId } = useParams()
+    const { songId } = useParams()
     const history = useHistory();
 
 
@@ -33,69 +32,50 @@ export const DemoForm = () => {
         }
         newDemo[event.target.id] = selectedVal
         setDemo(newDemo)
+
     }
 
-    useEffect(() => {
-        if (demoId) {
-            getDemoById(demoId).then(demo => {
-                setDemo(demo)
-            })
-        }
-    }, [])
 
-
+    const handleCheckboxChange = (event) => {
+        const newDemo = { ...demo }
+        newDemo[event.target.id] = event.target.checked
+        setDemo(newDemo)
+    }
 
     // Add dependency on songs for if/then statement (see animalform)
 
     // Goal: make completion value be true or false (boolean)
     // if/then--
-    // if checkbox is checked (and task is removed from user visibility on DOM), then completion is true
-    // if checkbox is not checked (and task is not removed), then completion is false
+    // if checkbox is checked, then completion is true
+    // if checkbox is not checked, then completion is false
     const handleSaveDemo = (event) => {
 
-        event.preventDefault()
 
-        const songId = demo.songId
-
-        if (demo.title === "" || demo.completionDateGoal === "" || demo.startDate === "" || demo.mixComplete === "" || demo.masterComplete === "" || demo.notes === "") {
+        if (demo.completionDateGoal === "" || demo.startDate === "" || demo.notes === "") {
             window.alert("Please add details of demo")
         } else {
-            if (demoId) {
-                //add songId?
-                updateDemo({
-                    id: demo.id,
-                    startDate: demo.startDate,
-                    completionDateGoal: demo.completionDateGoal,
-                    mixComplete: demo.mixComplete,
-                    masterComplete: demo.masterComplete,
-                    notes: demo.notes
-                })
-                    .then(() => history.push(`/demos/detail/${demo.id}`))
-            } else {
-                addDemo({
-                    title: demo.title,
-                    startDate: demo.startDate,
-                    completionDateGoal: demo.completionDateGoal,
-                    mixComplete: demo.mixComplete,
-                    masterComplete: demo.masterComplete,
-                    notes: demo.notes
-                })
-                    .then(() => history.push("/demos"))
-            }
+            addDemo({
+                songId: parseInt(songId),
+                startDate: demo.startDate,
+                completionDateGoal: demo.completionDateGoal,
+                mixComplete: demo.mixComplete,
+                masterComplete: demo.masterComplete,
+                notes: demo.notes
+            })
+                .then(() => history.push("/demos"))
         }
     }
 
     //add mastercomplete, check if id needs to be more specific for demo vs song on completionDateGoal and startDate
     //possibly add if statement to have h3 of song title when on the edit demo page (delete edit demo title)
+    //song.demoId ? edit demo : add a demo
+    //change ERD so it's a 1-1 ratio, add demoId to song object
+    //currently, edit demo is always showing up because there is a song id by default in the url
+    //add song, edit song, delete song and edit demo are working; add demo is not
     return (
         <form className="demoForm">
-            <h2 className="demoForm__title">{demoId ? "Edit Demo" : "Add A Demo"}</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="title">Demo Title:</label>
-                    <div>{demo.song.title}</div>
-                </div>
-            </fieldset>
+            <h2 className="demoForm__title">Add A Demo</h2>
+
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="startDate">Start Date:</label>
@@ -111,7 +91,13 @@ export const DemoForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="mixComplete">Mix Complete:</label>
-                    <input type="checkbox" className="checkbox" id="mixComplete" onChange={handleControlledInputChange} required autoFocus className="form-control" value={demo.mixComplete} />
+                    <input type="checkbox" className="checkbox" id="mixComplete" onChange={handleCheckboxChange} required autoFocus className="form-control" value={demo.mixComplete} />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="masterComplete">Master Complete:</label>
+                    <input type="checkbox" className="checkbox" id="masterComplete" onChange={handleCheckboxChange} required autoFocus className="form-control" value={demo.masterComplete} />
                 </div>
             </fieldset>
             <fieldset>
@@ -125,8 +111,25 @@ export const DemoForm = () => {
                     event.preventDefault()
                     handleSaveDemo()
                 }}>
-                {demoId ? "Save Demo" : "Add Demo"}
+                Add Demo
             </button>
         </form>
     )
 }
+
+
+// useEffect(() => {
+//     if (songId) {
+//         getSongById(demoId).then(demo => {
+//             setDemo(demo)
+//             console.log(demo)
+//         })
+//     }
+// }, [])
+
+{/* <fieldset>
+<div className="form-group">
+    <label htmlFor="title">Demo Title:</label>
+    <div>{demo.song.title}</div>
+</div>
+</fieldset> */}

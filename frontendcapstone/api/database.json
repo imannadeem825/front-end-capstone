@@ -7,7 +7,7 @@
       "lyricSummary": "accepting that friends will come and go, and you can't make them stay",
       "startDate": "9/2011",
       "completionDateGoal": "6/2016",
-      "progress": "verses need some work",
+      "progress": "verses need some work!",
       "productionGoals": "references: Paramore RIOT!, There For Tomorrow The Verge",
       "cowriters": "SueAnn Shiah"
     },
@@ -23,15 +23,15 @@
       "cowriters": "test1"
     },
     {
-      "title": "test 2",
+      "id": 4,
+      "title": "free falling",
       "feel": "2",
       "lyricSummary": "2",
       "startDate": "2",
       "completionDateGoal": "2",
       "progress": "2",
       "productionGoals": "2",
-      "cowriters": "2",
-      "id": 4
+      "cowriters": "2"
     }
   ],
   "demos": [
@@ -42,7 +42,16 @@
       "completionDateGoal": "8/2016",
       "mixComplete": true,
       "masterComplete": true,
-      "notes": "no further notes"
+      "notes": "no further notes!!"
+    },
+    {
+      "id": 5,
+      "songId": 2,
+      "startDate": "please work",
+      "completionDateGoal": "test",
+      "mixComplete": false,
+      "masterComplete": false,
+      "notes": "test"
     }
   ],
   "tracks": [

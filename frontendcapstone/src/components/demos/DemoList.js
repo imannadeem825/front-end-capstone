@@ -21,9 +21,6 @@ export const DemoList = () => {
     <div className="demos">
       {console.log("DemoList: Render", demos)}
       <h2>Demos</h2>
-      <button onClick={() => {history.push("/demos/create")}}>
-        Add A Demo
-      </button>
       {
         demos.map(demo => {
             const demoWithSong = songs.find( s => s.id === demo.songId)

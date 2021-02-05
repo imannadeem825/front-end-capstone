@@ -8,7 +8,8 @@ import { SongDetails } from "./songs/SongDetails"
 
 import { DemoProvider } from "./demos/DemoProvider"
 import { DemoList } from "./demos/DemoList"
-import { DemoForm } from "./demos/DemoForm"
+import { DemoEditForm } from "./demos/DemoEditForm"
+import { DemoAddForm } from "./demos/DemoAddForm"
 import { DemoDetails } from "./demos/DemoDetails"
 
 export const ApplicationViews = () => {
@@ -33,11 +34,11 @@ export const ApplicationViews = () => {
                 <Route exact path="/demos">
                     <DemoList />
                 </Route>
-                <Route path="/demos/create">
-                    <DemoForm />
+                <Route path="/demos/create/:songId(\d+)">
+                    <DemoAddForm />
                 </Route> 
                 <Route exact path="/demos/edit/:demoId(\d+)">
-                    <DemoForm />
+                    <DemoEditForm />
                 </Route>
                 <Route exact path="/demos/detail/:demoId(\d+)">
                     <DemoDetails />
