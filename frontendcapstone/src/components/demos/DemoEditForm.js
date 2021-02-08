@@ -47,7 +47,7 @@ export const DemoEditForm = () => {
         if (demoId) {
             getDemoById(demoId).then(demo => {
                 setDemo(demo)
-
+                
             })
         }
     }, [])
@@ -58,19 +58,18 @@ export const DemoEditForm = () => {
         if (demo.title === "" || demo.completionDateGoal === "" || demo.startDate === "" || demo.mixComplete === "" || demo.masterComplete === "" || demo.notes === "") {
             window.alert("Please add details of demo")
         } else {
-            updateDemo({
-                id: demo.id,
-                songId: demo.songId,
-                startDate: demo.startDate,
-                completionDateGoal: demo.completionDateGoal,
-                mixComplete: demo.mixComplete,
-                masterComplete: demo.masterComplete,
-                notes: demo.notes
-            })
+                updateDemo({
+                    id: demo.id,
+                    songId: demo.songId,
+                    startDate: demo.startDate,
+                    completionDateGoal: demo.completionDateGoal,
+                    mixComplete: demo.mixComplete,
+                    masterComplete: demo.masterComplete,
+                    notes: demo.notes
+                })
                 .then(() => history.push(`/demos/detail/${demo.id}`))
         }
     }
-
 
     return (
         <form className="demoForm">
