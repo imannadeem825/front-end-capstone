@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState, useRef } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { DemoContext } from "./DemoProvider"
+import { TrackList } from "../tracks/TrackList"
 import "./Demo.css"
-import { TrackForm } from "../tracks/TrackForm"
 import { useParams, useHistory } from "react-router-dom"
-//tracklist
 
 export const DemoDetails = () => {
   
@@ -11,7 +10,6 @@ export const DemoDetails = () => {
   const [demo, setDemo] = useState({})
   const { demoId } = useParams();
   const history = useHistory();
-  const existDialog = useRef()
 
   const handleDelete = () => {
     deleteDemo(demo.id)
@@ -20,7 +18,6 @@ export const DemoDetails = () => {
       })
   }
 
-//filter tracks by demoId
   useEffect(() => {
     console.log("useEffect", demoId)
     getDemoById(demoId)
@@ -43,23 +40,11 @@ export const DemoDetails = () => {
       }}>Edit
         </button>
       <button onClick={handleDelete}>Delete Demo</button>
-      <button onClick={() => {existDialog.current.showModal()}}>
+      <button onClick={() => {history.push(`/tracks/create/${demo.id}`)}}>
       Add A Track
       </button>
     </section>
-    <TrackForm existDialog={existDialog} />
+    <TrackList />
     </>
   )
 }
-
-
-//         existDialog.current.showModal()
-
-// x <main className="container--login">
-// x<dialog className="dialog dialog--auth" ref={existDialog}>
-//  x   <div>User does not exist</div>
-//  x   <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
-// x</dialog>
-// const existDialog = useRef()
-
-

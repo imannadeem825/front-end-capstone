@@ -5,9 +5,9 @@ import { useHistory, useParams } from 'react-router-dom';
 
 
 
-export const TrackForm = ({existDialog}) => {
+export const TrackForm = () => {
 
-    const { addTrack, updateTrack, getTrackById } = useContext(TrackContext)
+    const { addTrack } = useContext(TrackContext)
     const { demoId } = useParams()
     const history = useHistory();
 
@@ -18,6 +18,7 @@ export const TrackForm = ({existDialog}) => {
         timeToComplete: "",
         isComplete: false,
     });
+    console.log("testing track", track)
 
 
     const handleControlledInputChange = (event) => {
@@ -40,42 +41,24 @@ export const TrackForm = ({existDialog}) => {
     }
 
 
-    // useEffect(() => {
-    //     if (trackId) {
-    //         getTrackById(trackId)
-    //             .then(track => {
-    //                 setTrack(track)
-    //             })
-    //     }
-    // }, [])
-
     const handleSaveTrack = (event) => {
 
         if (track.title === "" || track.timeToComplete === "" || track.isComplete === "") {
             window.alert("Please add details of track")
         } else {
-            // if (trackId) {
-            //     updateTrack({
-            //         id: track.id,
-            //         title: track.title,
-            //         timeToComplete: track.timeToComplete,
-            //         isComplete: track.isComplete,
-            //     })    
-            // } else {
-                addTrack({
-                    demoId: parseInt(demoId),
-                    title: track.title,
-                    timeToComplete: track.timeToComplete,
-                    isComplete: track.isComplete,
-                })   
-            // }
+            addTrack({
+                demoId: parseInt(demoId),
+                title: track.title,
+                timeToComplete: track.timeToComplete,
+                isComplete: track.isComplete
+            })
+                .then(() => history.push(`/demos/detail/${demoId}`))
         }
     }
 
 
     return (
-        <dialog className="dialogTrackForm" ref={existDialog}>
-            <form className="trackForm">
+        <form className="trackForm">
             <h2 className="trackForm__title">Add A Track</h2>
             <fieldset>
                 <div className="form-group">
@@ -100,10 +83,8 @@ export const TrackForm = ({existDialog}) => {
                     event.preventDefault()
                     handleSaveTrack()
                 }}>
-                {demoId ? "Save Track" : "Add Track"}
-            </button>
-            </form>
-        </dialog>
-   
+                Add Track
+                </button>
+        </form>
     )
 }

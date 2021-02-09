@@ -11,7 +11,10 @@ import { DemoList } from "./demos/DemoList"
 import { DemoEditForm } from "./demos/DemoEditForm"
 import { DemoAddForm } from "./demos/DemoAddForm"
 import { DemoDetails } from "./demos/DemoDetails"
+
 import { TrackProvider } from "./tracks/TrackProvider"
+import { TrackForm } from "./tracks/TrackForm"
+
 
 export const ApplicationViews = () => {
     return (
@@ -33,7 +36,7 @@ export const ApplicationViews = () => {
         <SongProvider>
             <DemoProvider>
                 <TrackProvider>
-                    <Route exact path="/demos">
+                <Route exact path="/demos">
                         <DemoList />
                     </Route>
                     <Route path="/demos/create/:songId(\d+)">
@@ -48,7 +51,13 @@ export const ApplicationViews = () => {
                 </TrackProvider>
             </DemoProvider>
         </SongProvider>
-        
+        <DemoProvider>
+            <TrackProvider>
+                <Route path="/tracks/create/:demoId(\d+)">
+                    <TrackForm />
+                </Route> 
+            </TrackProvider>
+        </DemoProvider>
       </>
     )
 }

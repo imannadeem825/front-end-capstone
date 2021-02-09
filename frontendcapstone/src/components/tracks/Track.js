@@ -1,20 +1,14 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import { TrackContext } from "./TrackProvider"
 import "./Track.css"
-import {  useHistory } from "react-router-dom"
 
 
-export const Track = ({track, trackWithDemo}) => {
+export const Track = ({track}) => {
   
   const { deleteTrack } = useContext(TrackContext)
 
-  const history = useHistory();
-
   const handleDelete = () => {
     deleteTrack(track.id)
-      .then(() => {
-        history.push("/tracks")
-      })
   }
 
   return (
@@ -26,9 +20,3 @@ export const Track = ({track, trackWithDemo}) => {
     </section>
   )
 }
-
-
-{/* <button onClick={() => {
-  history.push(`/tracks/edit/${track.id}`)
-}}>Edit
-  </button> */}
