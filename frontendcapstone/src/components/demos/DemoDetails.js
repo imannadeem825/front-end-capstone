@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { DemoContext } from "./DemoProvider"
+import { TrackList } from "../tracks/TrackList"
 import "./Demo.css"
 import { useParams, useHistory } from "react-router-dom"
 
@@ -26,6 +27,7 @@ export const DemoDetails = () => {
   }, [])
 
   return (
+    <>
     <section className="demo">
       <h3 className="demo__title">Title: {demo.song?.title}</h3>
       <div className="demo__startDate">Start Date: {demo.startDate}</div>
@@ -38,11 +40,11 @@ export const DemoDetails = () => {
       }}>Edit
         </button>
       <button onClick={handleDelete}>Delete Demo</button>
+      <button onClick={() => {history.push(`/tracks/create/${demo.id}`)}}>
+      Add A Track
+      </button>
     </section>
+    <TrackList />
+    </>
   )
 }
-
-//add track button^
-//<button onClick={() => {history.push("/tracks/create")}}>
-// Add A Track
-// </button>
