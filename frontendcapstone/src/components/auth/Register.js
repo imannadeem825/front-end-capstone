@@ -30,7 +30,8 @@ export const Register = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            firstName: firstName.current.value,
+                            lastName: lastName.current.value
                         })
                     })
                         .then(res => res.json())

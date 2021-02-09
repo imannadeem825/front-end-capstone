@@ -31,3 +31,33 @@ export const Capstone = () => (
     </Route>
   </>
 );
+
+
+// export const Farms = () => (
+//   <>
+//       <Route
+//           render={() => {
+//               if (localStorage.getItem("find-a-farm_user")) {
+//                   return (
+//                       <>
+//                           <HeaderCard />
+//                           <ApplicationViews />
+//                       </>
+//                   );
+//           } else {
+//           return <Redirect to="/welcome" />;
+//           }
+//       }}
+//   />
+//       <Route path="/welcome">
+//           <HeaderCard />
+//           <WelcomePage />
+//       </Route>
+//   </>
+// )
+
+
+
+
+
+

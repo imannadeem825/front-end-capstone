@@ -2,6 +2,7 @@
   "songs": [
     {
       "id": 1,
+      "userId": 1,
       "title": "Already Gone",
       "feel": "power ballad",
       "lyricSummary": "accepting that friends will come and go, and you can't make them stay",
@@ -32,6 +33,41 @@
       "progress": "2",
       "productionGoals": "2",
       "cowriters": "2"
+    },
+    {
+      "title": "usertest",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "usertest2",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "title": "pop song",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 7
     }
   ],
   "demos": [
@@ -85,6 +121,18 @@
       "firstName": "Iman",
       "lastName": "Nadeem",
       "email": "iman@iman.com"
+    },
+    {
+      "email": "pop@pop.com",
+      "firstName": "pop",
+      "lastName": "thebird",
+      "id": 2
+    },
+    {
+      "email": "manu@manu.com",
+      "name": "manu",
+      "lastName": "thecat",
+      "id": 3
     }
   ]
 }

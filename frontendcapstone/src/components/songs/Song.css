@@ -1,0 +1,15 @@
+.songs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.song {
+    flex-basis: 28%;
+
+}
+
+.btn {
+    width: 10rem;
+}
