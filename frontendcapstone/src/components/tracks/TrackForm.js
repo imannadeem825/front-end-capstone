@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
+import { useHistory, useParams } from 'react-router-dom';
 import { TrackContext } from "./TrackProvider"
 import "./Track.css"
-import { useHistory, useParams } from 'react-router-dom';
 
 
 
@@ -22,7 +22,6 @@ export const TrackForm = () => {
 
 
     const handleControlledInputChange = (event) => {
-
         const newTrack = { ...track }
         let selectedVal = event.target.value
 
@@ -42,7 +41,6 @@ export const TrackForm = () => {
 
 
     const handleSaveTrack = (event) => {
-
         if (track.title === "" || track.timeToComplete === "" || track.isComplete === "") {
             window.alert("Please add details of track")
         } else {

@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
+import { useParams, useHistory } from "react-router-dom"
 import { DemoContext } from "./DemoProvider"
 import { TrackList } from "../tracks/TrackList"
 import "./Demo.css"
-import { useParams, useHistory } from "react-router-dom"
+
 
 export const DemoDetails = () => {
   

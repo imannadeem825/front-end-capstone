@@ -3,10 +3,6 @@ import { useParams, useHistory } from "react-router-dom"
 import { SongContext } from "./SongProvider"
 import "./Song.css"
 
-//do i need these?
-import { DemoContext } from "../demos/DemoProvider"
-import { DemoDetails } from "../demos/DemoDetails"
-
 
 export const SongDetails = () => {
 

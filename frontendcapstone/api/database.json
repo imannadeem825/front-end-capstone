@@ -13,39 +13,6 @@
       "cowriters": "SueAnn Shiah"
     },
     {
-      "id": 2,
-      "title": "test1",
-      "feel": "test1",
-      "lyricSummary": "test1",
-      "startDate": "test1",
-      "completionDateGoal": "test1",
-      "progress": "test1",
-      "productionGoals": "test1",
-      "cowriters": "test1"
-    },
-    {
-      "id": 4,
-      "title": "free falling",
-      "feel": "2",
-      "lyricSummary": "2",
-      "startDate": "2",
-      "completionDateGoal": "2",
-      "progress": "2",
-      "productionGoals": "2",
-      "cowriters": "2"
-    },
-    {
-      "title": "usertest",
-      "feel": "test",
-      "lyricSummary": "test",
-      "startDate": "test",
-      "completionDateGoal": "test",
-      "progress": "test",
-      "productionGoals": "test",
-      "cowriters": "test",
-      "id": 5
-    },
-    {
       "userId": 1,
       "title": "usertest2",
       "feel": "test",
@@ -68,6 +35,18 @@
       "productionGoals": "test",
       "cowriters": "test",
       "id": 7
+    },
+    {
+      "userId": 2,
+      "title": "pop test 2",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 8
     }
   ],
   "demos": [
@@ -81,22 +60,31 @@
       "notes": "no further notes"
     },
     {
-      "id": 5,
-      "songId": 2,
-      "startDate": "please work",
+      "songId": 7,
+      "startDate": "pop demo",
       "completionDateGoal": "test",
-      "mixComplete": false,
+      "mixComplete": true,
       "masterComplete": false,
-      "notes": "test"
+      "notes": "test",
+      "id": 7
     },
     {
-      "songId": 4,
-      "startDate": "freeee",
-      "completionDateGoal": "fallin",
+      "songId": 8,
+      "startDate": "pop demo 2",
+      "completionDateGoal": "test",
       "mixComplete": true,
       "masterComplete": true,
-      "notes": "free fallin",
-      "id": 6
+      "notes": "test",
+      "id": 8
+    },
+    {
+      "songId": 6,
+      "startDate": "user test 2 demo",
+      "completionDateGoal": "test",
+      "mixComplete": true,
+      "masterComplete": true,
+      "notes": "test",
+      "id": 9
     }
   ],
   "tracks": [
@@ -113,6 +101,13 @@
       "timeToComplete": "test",
       "isComplete": true,
       "id": 2
+    },
+    {
+      "demoId": 9,
+      "title": "drums",
+      "timeToComplete": "2 hours",
+      "isComplete": false,
+      "id": 3
     }
   ],
   "users": [

@@ -3,7 +3,6 @@ import { UserContext } from "./UserProvider"
 import "./User.css"
 
 
-//user name is getting combined into one name property in database.json
 export const User = ({user}) => {
 
   return (

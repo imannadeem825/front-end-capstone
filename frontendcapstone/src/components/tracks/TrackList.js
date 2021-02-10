@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import { TrackContext } from "./TrackProvider"
 import { Track } from "./Track"
-import { useParams } from "react-router-dom"
 import "./Track.css"
 
 

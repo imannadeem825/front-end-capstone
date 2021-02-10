@@ -4,8 +4,6 @@ import "./Song.css"
 import { useHistory, useParams } from 'react-router-dom';
 
 
-
-
 export const SongForm = () => {
 
     const { addSong, getSongs, updateSong, getSongById } = useContext(SongContext)
@@ -27,7 +25,6 @@ export const SongForm = () => {
 
 
     const handleControlledInputChange = (event) => {
-
         const newSong = { ...song }
         let selectedVal = event.target.value
 
@@ -50,7 +47,7 @@ export const SongForm = () => {
         })
     }, [])
 
-    //add userId property to addSong?
+    
     const handleSaveSong = (event) => {
 
         if (song.title === "" || song.feel === "" || song.lyricSummary === "" || song.startDate === "" || song.completionDateGoal === "" || song.progress === "" || song.productionGoals === "" || song.cowriters === "") {

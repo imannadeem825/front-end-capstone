@@ -7,9 +7,12 @@
 
 .song {
     flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid darkblue;
 
 }
 
 .btn {
-    width: 10rem;
+    width: 1em;
 }

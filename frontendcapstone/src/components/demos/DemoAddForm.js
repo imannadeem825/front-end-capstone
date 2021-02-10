@@ -23,7 +23,6 @@ export const DemoAddForm = () => {
 
 
     const handleControlledInputChange = (event) => {
-
         const newDemo = { ...demo }
         let selectedVal = event.target.value
 
@@ -43,7 +42,6 @@ export const DemoAddForm = () => {
 
 
     const handleSaveDemo = (event) => {
-
         if (demo.completionDateGoal === "" || demo.startDate === "" || demo.notes === "") {
             window.alert("Please add details of demo")
         } else {
@@ -103,9 +101,3 @@ export const DemoAddForm = () => {
         </form>
     )
 }
-
-
-
-//possibly add if statement to have h3 of song title when on the edit demo page (delete edit demo title)
-//song.demoId ? edit demo : add a demo
-//change ERD so it's a 1-1 ratio, add demoId to song object
