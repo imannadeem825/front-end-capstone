@@ -1,4 +1,42 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Iman",
+      "lastName": "Nadeem",
+      "email": "iman@iman.com"
+    },
+    {
+      "email": "pop@pop.com",
+      "firstName": "pop",
+      "lastName": "thebird",
+      "id": 2
+    },
+    {
+      "email": "manu@manu.com",
+      "name": "manu",
+      "lastName": "thecat",
+      "id": 3
+    },
+    {
+      "email": "mvp@mvp.com",
+      "firstName": "mvp",
+      "lastName": "test",
+      "id": 4
+    },
+    {
+      "email": "capstone@capstone.com",
+      "firstName": "yay",
+      "lastName": "capstone",
+      "id": 5
+    },
+    {
+      "email": "new@new.com",
+      "firstName": "newuser",
+      "lastName": "newuser",
+      "id": 6
+    }
+  ],
   "songs": [
     {
       "id": 1,
@@ -47,6 +85,65 @@
       "productionGoals": "test",
       "cowriters": "test",
       "id": 8
+    },
+    {
+      "id": 9,
+      "title": "mvp song",
+      "feel": "testing",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test"
+    },
+    {
+      "userId": 4,
+      "title": "mvp test 2",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "title": "mvp test 3",
+      "feel": "test",
+      "lyricSummary": "test",
+      "startDate": "test",
+      "completionDateGoal": "test",
+      "progress": "test",
+      "productionGoals": "test",
+      "cowriters": "test",
+      "id": 11
+    },
+    {
+      "userId": 5,
+      "title": "capstone",
+      "feel": "t",
+      "lyricSummary": "t",
+      "startDate": "t",
+      "completionDateGoal": "t",
+      "progress": "t",
+      "productionGoals": "t",
+      "cowriters": "t",
+      "id": 12
+    },
+    {
+      "userId": 6,
+      "title": "anothersong",
+      "feel": "t",
+      "lyricSummary": "t",
+      "startDate": "t",
+      "completionDateGoal": "t",
+      "progress": "t",
+      "productionGoals": "t",
+      "cowriters": "t",
+      "id": 14
     }
   ],
   "demos": [
@@ -85,6 +182,24 @@
       "masterComplete": true,
       "notes": "test",
       "id": 9
+    },
+    {
+      "songId": 10,
+      "startDate": "mvp test 2",
+      "completionDateGoal": "test",
+      "mixComplete": false,
+      "masterComplete": false,
+      "notes": "test",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "songId": 12,
+      "startDate": "capstone!",
+      "completionDateGoal": "t",
+      "mixComplete": true,
+      "masterComplete": true,
+      "notes": "t"
     }
   ],
   "tracks": [
@@ -108,26 +223,13 @@
       "timeToComplete": "2 hours",
       "isComplete": false,
       "id": 3
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "firstName": "Iman",
-      "lastName": "Nadeem",
-      "email": "iman@iman.com"
     },
     {
-      "email": "pop@pop.com",
-      "firstName": "pop",
-      "lastName": "thebird",
-      "id": 2
-    },
-    {
-      "email": "manu@manu.com",
-      "name": "manu",
-      "lastName": "thecat",
-      "id": 3
+      "demoId": 10,
+      "title": "test",
+      "timeToComplete": "test",
+      "isComplete": true,
+      "id": 4
     }
   ]
 }

@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
+import { useHistory, useParams } from 'react-router-dom';
 import { SongContext } from "./SongProvider"
 import "./Song.css"
-import { useHistory, useParams } from 'react-router-dom';
+
 
 
 export const SongForm = () => {
@@ -55,6 +56,7 @@ export const SongForm = () => {
         } else {
             if (songId) {
                 updateSong({
+                    userId: currentUser,
                     id: song.id,
                     title: song.title,
                     feel: song.feel,

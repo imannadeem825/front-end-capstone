@@ -31,8 +31,9 @@ export const SongDetails = () => {
 
   return (
     <section className="song">
-      <h3 className="song__title">Title: {song.title}</h3>
-      <div className="song__feel">Feel: {song.feel}</div>
+      <h3 className="song__title">Song Title: {song.title}</h3>
+      <div className="song__feel">Feel: </div>
+        <div className="feel__text">{song.feel}</div>
       <div className="song__lyricSummary">Lyric Summary: {song.lyricSummary}</div>
       <div className="song__startDate">Start Date: {song.startDate}</div>
       <div className="song__completionDateGoal">Completion Date Goal: {song.completionDateGoal}</div>

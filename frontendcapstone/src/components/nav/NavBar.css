@@ -2,4 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style-type: none;
+    background-color: #6198CB;
+    height: 8rem;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navbar__item {
+    font-size: 120%;
+ 
+}
+
+.logOutBtn {
+    display: flex;
+}
+
+.logOutBtn__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }

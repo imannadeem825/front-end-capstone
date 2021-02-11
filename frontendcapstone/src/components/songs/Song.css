@@ -10,9 +10,51 @@
     margin: 1em;
     padding: 1em;
     border: 2px solid darkblue;
-
+    background-color: #ADE4FC;
+    width: 50%;
+    border-radius: 15px;
+    align-self: center;
 }
 
-.btn {
-    width: 1em;
+.btn-primary {
+    width: 8em;
+}
+
+.songForm__title {
+    background-color: #AAC1C9;
+}
+
+.addASongButton {
+    width: 8em;
+    height: 2em;
+    text-align: center;
+ 
+}
+
+.addASongButton__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+.songList__title {
+    padding: 5 em;
+    margin: 5 em;
+    display: flex;
+    justify-content: center;
+}
+
+.song__title {
+    color: navy;
+}
+
+.song__feel,
+.song__lyricSummary,
+.song__startDate,
+.song__completionDateGoal,
+.song__progress,
+.song__productionGoals,
+.song__cowriters {
+    font-weight: bold;
 }

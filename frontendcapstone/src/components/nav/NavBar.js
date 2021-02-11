@@ -13,6 +13,10 @@ export const NavBar = () => {
     }
 
     return (
+        <>
+        <div className="logOutBtn__div">
+            <button onClick={handleLogOutBtn} className="logOutBtn">Log Out</button>
+        </div>
         <ul className="navbar">
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">Capstone Home</Link>
@@ -22,8 +26,8 @@ export const NavBar = () => {
             </li>
             <li className="navbar__item">
                 <Link className="navbar__link" to="/demos">Demos to Produce</Link>
-            </li>
-            <button onClick={handleLogOutBtn} className="logOutBtn">Log Out</button>
+            </li> 
         </ul>
+        </>
     )
 }
