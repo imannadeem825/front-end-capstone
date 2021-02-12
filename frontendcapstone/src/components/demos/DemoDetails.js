@@ -36,6 +36,9 @@ export const DemoDetails = () => {
       <div className="demo__mixComplete">Mix Complete: {demo.mixComplete?.toString()}</div>
       <div className="demo__masterComplete">Master Complete: {demo.masterComplete?.toString()}</div>
       <div className="demo__notes">Notes: {demo.notes}</div>
+    </section>
+    <TrackList />
+    <section className="demoButtons">
       <button onClick={() => {
         history.push(`/demos/edit/${demo.id}`)
       }}>Edit
@@ -45,7 +48,7 @@ export const DemoDetails = () => {
       Add A Track
       </button>
     </section>
-    <TrackList />
+
     </>
   )
 }
