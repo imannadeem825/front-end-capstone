@@ -51,18 +51,6 @@
       "cowriters": "SueAnn Shiah"
     },
     {
-      "userId": 1,
-      "title": "usertest2",
-      "feel": "test",
-      "lyricSummary": "test",
-      "startDate": "test",
-      "completionDateGoal": "test",
-      "progress": "test",
-      "productionGoals": "test",
-      "cowriters": "test",
-      "id": 6
-    },
-    {
       "userId": 2,
       "title": "pop song",
       "feel": "test",
@@ -144,6 +132,18 @@
       "productionGoals": "t",
       "cowriters": "t",
       "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Villain",
+      "feel": "power ballad",
+      "lyricSummary": "friend betrayal",
+      "startDate": "9/20/2019",
+      "completionDateGoal": "12/2019",
+      "progress": "verse and chorus ",
+      "productionGoals": "halsey",
+      "cowriters": "cody quistad",
+      "id": 15
     }
   ],
   "demos": [
@@ -175,15 +175,6 @@
       "id": 8
     },
     {
-      "songId": 6,
-      "startDate": "user test 2 demo",
-      "completionDateGoal": "test",
-      "mixComplete": true,
-      "masterComplete": true,
-      "notes": "test",
-      "id": 9
-    },
-    {
       "songId": 10,
       "startDate": "mvp test 2",
       "completionDateGoal": "test",
@@ -200,6 +191,15 @@
       "mixComplete": true,
       "masterComplete": true,
       "notes": "t"
+    },
+    {
+      "songId": 15,
+      "startDate": "10/2019",
+      "completionDateGoal": "12/2019",
+      "mixComplete": false,
+      "masterComplete": false,
+      "notes": "pop production",
+      "id": 12
     }
   ],
   "tracks": [
@@ -218,18 +218,18 @@
       "id": 2
     },
     {
-      "demoId": 9,
-      "title": "drums",
-      "timeToComplete": "2 hours",
-      "isComplete": false,
-      "id": 3
-    },
-    {
       "demoId": 10,
       "title": "test",
       "timeToComplete": "test",
       "isComplete": true,
       "id": 4
+    },
+    {
+      "demoId": 12,
+      "title": "guitar",
+      "timeToComplete": "2 hours",
+      "isComplete": false,
+      "id": 5
     }
   ]
 }

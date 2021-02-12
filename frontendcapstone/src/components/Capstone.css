@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
-.songs, .addASongButton, .logOutBtn {
+.songs,
+.addASongButton,
+.saveSong__button,
+.logOutBtn,
+.form-group,
+textarea,
+input {
     color:  black;
     font-family: "Playfair Display"
 }

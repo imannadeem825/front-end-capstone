@@ -1,3 +1,5 @@
+/* song cards */
+
 .songs {
     display: flex;
     flex-direction: column;
@@ -16,13 +18,8 @@
     align-self: center;
 }
 
-.btn-primary {
-    width: 8em;
-}
 
-.songForm__title {
-    background-color: #AAC1C9;
-}
+/* song list  */
 
 .addASongButton {
     width: 8em;
@@ -47,14 +44,48 @@
 
 .song__title {
     color: navy;
+    margin-bottom: 2em;
+}
+
+
+/* song details */
+
+.feel__title,
+.lyricSummary__title,
+.startDate__title,
+.completionDate__title,
+.progress__title,
+.productionGoals__title,
+.cowriters__title {
+    font-weight: bold;
 }
 
 .song__feel,
 .song__lyricSummary,
 .song__startDate,
-.song__completionDateGoal,
+.song__completionDate,
 .song__progress,
 .song__productionGoals,
 .song__cowriters {
-    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+/* song form */
+
+.songForm__title {
+    color: navy;
+    margin-top: 1em;
+    font-family: "Playfair Display";
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.songForm {
+    background-color: #ADE4FC;
+    margin: 1em;
 }

@@ -137,7 +137,7 @@ export const SongForm = () => {
                     <input type="text" id="cowriters" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="List any co-writers" value={song.cowriters} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary"
+            <button className="saveSong__button"
                 onClick={event => {
                     event.preventDefault()
                     handleSaveSong()

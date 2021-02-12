@@ -19,7 +19,7 @@ export const DemoList = () => {
   return (
     <div className="demos">
       {console.log("DemoList: Render", demos)}
-      <h2>Demos</h2>
+      <h2 className="demoList__title">Demos</h2>
       {
         filteredDemos.map(demo => {
             return <Demo key={demo.id} demo={demo} />
