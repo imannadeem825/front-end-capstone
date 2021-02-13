@@ -193,13 +193,22 @@
       "notes": "t"
     },
     {
+      "id": 12,
       "songId": 15,
       "startDate": "10/2019",
       "completionDateGoal": "12/2019",
       "mixComplete": false,
       "masterComplete": false,
-      "notes": "pop production",
-      "id": 12
+      "notes": "pop production"
+    },
+    {
+      "songId": 15,
+      "startDate": "10/2019",
+      "completionDateGoal": "11/2019",
+      "mixComplete": true,
+      "masterComplete": false,
+      "notes": "bedroom pop meets avril lavigne",
+      "id": 13
     }
   ],
   "tracks": [
@@ -230,6 +239,13 @@
       "timeToComplete": "2 hours",
       "isComplete": false,
       "id": 5
+    },
+    {
+      "demoId": 1,
+      "title": "bass",
+      "timeToComplete": "1 hour",
+      "isComplete": false,
+      "id": 6
     }
   ]
 }
