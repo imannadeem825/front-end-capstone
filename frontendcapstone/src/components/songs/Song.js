@@ -1,6 +1,6 @@
 import React from "react"
-import "./Song.css"
 import { Link } from "react-router-dom"
+import "./Song.css"
 
 
 export const Song = ({ song }) => {

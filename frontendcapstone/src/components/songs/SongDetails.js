@@ -3,10 +3,6 @@ import { useParams, useHistory } from "react-router-dom"
 import { SongContext } from "./SongProvider"
 import "./Song.css"
 
-//do i need these?
-import { DemoContext } from "../demos/DemoProvider"
-import { DemoDetails } from "../demos/DemoDetails"
-
 
 export const SongDetails = () => {
 
@@ -35,14 +31,35 @@ export const SongDetails = () => {
 
   return (
     <section className="song">
-      <h3 className="song__title">Title: {song.title}</h3>
-      <div className="song__feel">Feel: {song.feel}</div>
-      <div className="song__lyricSummary">Lyric Summary: {song.lyricSummary}</div>
-      <div className="song__startDate">Start Date: {song.startDate}</div>
-      <div className="song__completionDateGoal">Completion Date Goal: {song.completionDateGoal}</div>
-      <div className="song__progress">Progress: {song.progress}</div>
-      <div className="song__productionGoals">Production Goals: {song.productionGoals}</div>
-      <div className="song__cowriters">Co-writers: {song.cowriters}</div>
+      <h2 className="song__title">Song Title: {song.title}</h2>
+      <div className="song__feel">
+        <div className="feel__title">Feel:</div>
+        <div className="feel__text">{song.feel}</div>
+      </div>
+      <div className="song__lyricSummary">
+        <div className="lyricSummary__title">Lyric Summary:</div>
+        <div className="lyricSummary__text">{song.lyricSummary}</div>
+      </div>
+      <div className="song__startDate">
+        <div className="startDate__title">Start Date:</div>
+        <div className="startDate__text">{song.startDate}</div>
+      </div>
+      <div className="song__completionDateGoal">
+        <div className="completionDate__title">Completion Date Goal:</div>
+        <div className="completionDateGoal__text">{song.completionDateGoal}</div>
+      </div>
+      <div className="song__progress">
+        <div className="progress__title">Progress:</div>
+        <div className="progress__text">{song.progress}</div>
+      </div>
+      <div className="song__productionGoals">
+        <div className="productionGoals__title">Production Goals:</div>
+        <div className="productionGoals__text">{song.productionGoals}</div>
+      </div>
+      <div className="song__cowriters">
+        <div className="cowriters__title">Co-writers:</div>
+        <div className="cowriters__text">{song.cowriters}</div>
+      </div>
       <button onClick={() => {
         history.push(`/songs/edit/${song.id}`)
       }}>Edit

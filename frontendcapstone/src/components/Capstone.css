@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+.songs,
+.addASongButton,
+.saveSong__button,
+.logOutBtn,
+.form-group,
+textarea,
+input {
+    color:  black;
+    font-family: "Playfair Display"
+}
+
+body {
+    background-color: #2DC5F5;
+}
+
+a:link,
+a:visited {
+    color: navy;
+    text-decoration: none;
+}
+
+a:hover {
+   color: rgb(201, 53, 8); 
+}

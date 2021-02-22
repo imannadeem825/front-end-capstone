@@ -2,7 +2,9 @@ import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
+
 export const Register = (props) => {
+    
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
@@ -18,8 +20,6 @@ export const Register = (props) => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-
-
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
@@ -30,7 +30,8 @@ export const Register = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            firstName: firstName.current.value,
+                            lastName: lastName.current.value
                         })
                     })
                         .then(res => res.json())
@@ -50,12 +51,10 @@ export const Register = (props) => {
 
     return (
         <main style={{ textAlign: "center" }}>
-
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
-
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Capstone</h1>
                 <fieldset>

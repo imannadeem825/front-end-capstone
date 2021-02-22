@@ -15,24 +15,28 @@ import { DemoDetails } from "./demos/DemoDetails"
 import { TrackProvider } from "./tracks/TrackProvider"
 import { TrackForm } from "./tracks/TrackForm"
 
+import { UserProvider } from "./users/UserProvider"
+
 
 export const ApplicationViews = () => {
     return (
         <>
-        <SongProvider>
-            <Route exact path="/songs">
-                <SongList />
-            </Route>
-            <Route path="/songs/create">
-                <SongForm />
-            </Route> 
-            <Route exact path="/songs/edit/:songId(\d+)">
-                <SongForm />
-            </Route>
-            <Route exact path="/songs/detail/:songId(\d+)">
-                <SongDetails />
-            </Route>
-        </SongProvider>
+        <UserProvider>
+            <SongProvider>
+                <Route exact path="/songs">
+                    <SongList />
+                </Route>
+                <Route path="/songs/create">
+                    <SongForm />
+                </Route> 
+                <Route exact path="/songs/edit/:songId(\d+)">
+                    <SongForm />
+                </Route>
+                <Route exact path="/songs/detail/:songId(\d+)">
+                    <SongDetails />
+                </Route>
+            </SongProvider>
+        </UserProvider>
         <SongProvider>
             <DemoProvider>
                 <TrackProvider>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
+import { useHistory, useParams } from 'react-router-dom';
 import { DemoContext } from "./DemoProvider"
 import "./Demo.css"
-import { useHistory, useParams } from 'react-router-dom';
 
 
 
@@ -23,7 +23,6 @@ export const DemoEditForm = () => {
 
 
     const handleControlledInputChange = (event) => {
-
         const newDemo = { ...demo }
         let selectedVal = event.target.value
         console.log("checkbox", selectedVal)
@@ -47,14 +46,12 @@ export const DemoEditForm = () => {
         if (demoId) {
             getDemoById(demoId).then(demo => {
                 setDemo(demo)
-                
             })
         }
     }, [])
 
 
     const handleSaveDemo = (event) => {
-
         if (demo.title === "" || demo.completionDateGoal === "" || demo.startDate === "" || demo.mixComplete === "" || demo.masterComplete === "" || demo.notes === "") {
             window.alert("Please add details of demo")
         } else {

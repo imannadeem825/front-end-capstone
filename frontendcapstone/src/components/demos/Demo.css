@@ -1,0 +1,36 @@
+/* demo list  */
+
+.demoList__title {
+    padding: 5 em;
+    margin: 5 em;
+    display: flex;
+    justify-content: center;
+}
+
+.demo__title {
+    color: navy;
+    margin-bottom: 2em;
+}
+
+
+/* demo form */
+
+.demoButtons {
+    margin-top: 3%;
+}
+
+.demoForm {
+    background-color: #ADE4FC;
+    margin: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.demoForm__title {
+    color: navy;
+    margin-top: 1em;
+    font-family: "Playfair Display";
+}

@@ -1,7 +1,6 @@
 import React, { useState, createContext } from "react"
 export const DemoContext = createContext()
 
-//are all expands correct?
 
 export const DemoProvider = (props) => {
     
