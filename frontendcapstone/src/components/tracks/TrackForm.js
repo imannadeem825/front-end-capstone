@@ -76,7 +76,7 @@ export const TrackForm = () => {
                     <input type="checkbox" className="checkbox" id="isComplete" checked={track.isComplete} onChange={handleCheckboxChange} required autoFocus className="form-control" value={track.isComplete} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary"
+            <button className="addATrack__button"
                 onClick={event => {
                     event.preventDefault()
                     handleSaveTrack()

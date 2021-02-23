@@ -14,9 +14,15 @@ export const Track = ({track}) => {
   return (
     <section className="track">
       <h3 className="track__title">Track: {track.title}</h3>
-      <div className="track__timeToComplete">Time to Complete: {track.timeToComplete}</div>
-      <div className="track__isComplete">Track Complete: {track.isComplete?.toString()}</div>
-      <button onClick={handleDelete}>Delete Track</button>
+      <div className="track__timeToComplete"> 
+        <div className="timeToComplete__title">Time to Complete:</div>
+        <div className="timeToComplete__text">{track.timeToComplete}</div>
+      </div>
+      <div className="track__isComplete"> 
+        <div className="isComplete__title">Track Complete:</div>
+        <div className="isComplete__text">{track.isComplete?.toString()}</div>
+      </div>
+      <button className="deleteTrack__button" onClick={handleDelete}>Delete Track</button>
     </section>
   )
 }

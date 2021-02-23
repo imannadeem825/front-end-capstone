@@ -17,11 +17,16 @@ import { TrackForm } from "./tracks/TrackForm"
 
 import { UserProvider } from "./users/UserProvider"
 
+import { Home } from "./Home"
+
 
 export const ApplicationViews = () => {
     return (
         <>
         <UserProvider>
+            <Route exact path="/">
+                <Home />
+            </Route>
             <SongProvider>
                 <Route exact path="/songs">
                     <SongList />

@@ -144,6 +144,18 @@
       "productionGoals": "halsey",
       "cowriters": "cody quistad",
       "id": 15
+    },
+    {
+      "userId": 1,
+      "title": "Hollow",
+      "feel": "Power ballad",
+      "lyricSummary": "Manipulative love interest",
+      "startDate": "9/2017",
+      "completionDateGoal": "12/2017",
+      "progress": "Verse, chorus, half of bridge",
+      "productionGoals": "PVRIS reference",
+      "cowriters": "Nick Lorenz, Jacob Metoyer",
+      "id": 16
     }
   ],
   "demos": [
@@ -193,15 +205,6 @@
       "notes": "t"
     },
     {
-      "id": 12,
-      "songId": 15,
-      "startDate": "10/2019",
-      "completionDateGoal": "12/2019",
-      "mixComplete": false,
-      "masterComplete": false,
-      "notes": "pop production"
-    },
-    {
       "songId": 15,
       "startDate": "10/2019",
       "completionDateGoal": "11/2019",
@@ -209,23 +212,18 @@
       "masterComplete": false,
       "notes": "bedroom pop meets avril lavigne",
       "id": 13
+    },
+    {
+      "songId": 16,
+      "startDate": "1/2018",
+      "completionDateGoal": "2/2018",
+      "mixComplete": false,
+      "masterComplete": false,
+      "notes": "pop production",
+      "id": 14
     }
   ],
   "tracks": [
-    {
-      "id": 1,
-      "demoId": 1,
-      "trackTitle": "rhythm guitar",
-      "timeToComplete": "3 hours",
-      "isComplete": true
-    },
-    {
-      "demoId": 1,
-      "title": "test",
-      "timeToComplete": "test",
-      "isComplete": true,
-      "id": 2
-    },
     {
       "demoId": 10,
       "title": "test",
@@ -234,18 +232,25 @@
       "id": 4
     },
     {
-      "demoId": 12,
-      "title": "guitar",
-      "timeToComplete": "2 hours",
-      "isComplete": false,
-      "id": 5
-    },
-    {
       "demoId": 1,
       "title": "bass",
       "timeToComplete": "1 hour",
       "isComplete": false,
       "id": 6
+    },
+    {
+      "demoId": 14,
+      "title": "Vocals",
+      "timeToComplete": "4 hours",
+      "isComplete": false,
+      "id": 7
+    },
+    {
+      "demoId": 1,
+      "title": "Rhythm guitar",
+      "timeToComplete": "2 hours",
+      "isComplete": true,
+      "id": 8
     }
   ]
 }

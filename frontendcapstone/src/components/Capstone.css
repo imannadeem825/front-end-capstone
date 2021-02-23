@@ -2,9 +2,19 @@
 
 
 .songs,
+.demos,
+.track,
+.demo,
+.tracks,
 .addASongButton,
 .saveSong__button,
 .logOutBtn,
+.editDemo__button,
+.deleteDemo__button,
+.addATrack__button,
+.deleteTrack__button,
+.addATrack__button,
+.signIn__button,
 .form-group,
 textarea,
 input {

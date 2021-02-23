@@ -1,0 +1,80 @@
+/* track cards */
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(157, 198, 230);
+    border: 2px solid navy;
+    border-radius: 15px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.track {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid rgb(201, 53, 8);
+    background-color: rgb(235, 198, 177);
+    width: 50%;
+    border-radius: 15px;
+}
+
+/* background-color: #ADE4FC; */
+
+
+/* track list  */
+
+.deleteTrack__Button {
+    width: 8em;
+    height: 2em;
+    text-align: center;
+ 
+}
+
+.trackList__title {
+    padding: 5 em;
+    margin: 5 em;
+    display: flex;
+    color: rgb(201, 53, 8);
+}
+
+.track__title {
+    color:rgb(201, 53, 8);
+    margin-bottom: 2em;
+}
+
+
+/* track details */
+
+.timeToComplete__title,
+.isComplete__title {
+    font-weight: bold;
+}
+
+.track__timeToComplete,
+.track__isComplete {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+/* track form */
+
+.trackForm__title {
+    color: navy;
+    margin-top: 1em;
+    font-family: "Playfair Display";
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.trackForm {
+    background-color: #ADE4FC;
+    margin: 1em;
+}

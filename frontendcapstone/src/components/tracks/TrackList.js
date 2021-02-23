@@ -20,7 +20,7 @@ export const TrackList = () => {
   return (
     <div className="tracks">
       {console.log("TrackList: Render", tracks)}
-      <h3>Tracks</h3>
+      <h3 className="trackList__title">Tracks</h3>
       {
         filteredTracks.map(track => {
           return <Track key={track.id} track={track} />

@@ -1,3 +1,31 @@
+/* demo cards */
+.demos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.demo {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid darkblue;
+    background-color: #ADE4FC;
+    border-radius: 15px;
+    align-self: center;
+}
+
+.demo__info {
+    margin-left: 1em;
+    margin-right: 1em;
+  
+    padding-left: 1em;
+    padding-right: 1em;
+ 
+}
+
+
 /* demo list  */
 
 .demoList__title {
@@ -9,7 +37,7 @@
 
 .demo__title {
     color: navy;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 
@@ -17,6 +45,9 @@
 
 .demoButtons {
     margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .demoForm {
@@ -33,4 +64,23 @@
     color: navy;
     margin-top: 1em;
     font-family: "Playfair Display";
+}
+
+/* demo details */
+
+.startDate__title,
+.completionDateGoal__title,
+.mixComplete__title,
+.masterComplete__title,
+.notes__title {
+    font-weight: bold;
+}
+
+.demo__startDate,
+.demo__completionDateGoal,
+.demo__mixComplete,
+.demo__masterComplete,
+.demo__notes {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }

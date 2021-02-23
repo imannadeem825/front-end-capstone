@@ -29,25 +29,45 @@ export const DemoDetails = () => {
 
   return (
     <>
-    <section className="demo">
-      <h3 className="demo__title">Title: {demo.song?.title}</h3>
-      <div className="demo__startDate">Start Date: {demo.startDate}</div>
-      <div className="demo__completionDateGoal">Completion Date Goal: {demo.completionDateGoal}</div>
-      <div className="demo__mixComplete">Mix Complete: {demo.mixComplete?.toString()}</div>
-      <div className="demo__masterComplete">Master Complete: {demo.masterComplete?.toString()}</div>
-      <div className="demo__notes">Notes: {demo.notes}</div>
-    </section>
-    <TrackList />
     <section className="demoButtons">
-      <button onClick={() => {
+      <button className="editDemo__button" onClick={() => {
         history.push(`/demos/edit/${demo.id}`)
-      }}>Edit
+      }}>Edit Demo
         </button>
-      <button onClick={handleDelete}>Delete Demo</button>
-      <button onClick={() => {history.push(`/tracks/create/${demo.id}`)}}>
+      <button className="deleteDemo__button" onClick={handleDelete}>Delete Demo</button>
+      <button className="addATrack__button" onClick={() => {history.push(`/tracks/create/${demo.id}`)}}>
       Add A Track
       </button>
     </section>
+    <section className="demo">
+      <h3 className="demo__title">Demo Title: {demo.song?.title}</h3>
+      <div className="demo__info">
+        <div className="demo__startDate"> 
+          <div className="startDate__title">Start Date:</div>
+          <div className="startDate__text">{demo.startDate}</div>
+        </div>
+        <div className="demo__completionDateGoal"> 
+          <div className="completionDateGoal__title">Completion Date Goal:</div>
+          <div className="completionDateGoal__text">{demo.completionDateGoal}</div>
+        </div>
+        <div className="demo__mixComplete"> 
+          <div className="mixComplete__title">Mix Complete:</div>
+          <div className="mixComplete__text">{demo.mixComplete?.toString()}</div>
+        </div>
+        <div className="demo__masterComplete"> 
+          <div className="masterComplete__title">Master Complete:</div>
+          <div className="masterComplete__text">{demo.masterComplete?.toString()}</div>
+        </div>
+        <div className="demo__notes"> 
+          <div className="notes__title">Notes:</div>
+          <div className="notes__text">{demo.notes}</div>
+        </div>
+      </div>
+    </section>
+    <div className="track__info">
+        <TrackList />
+    </div>
+  
 
     </>
   )

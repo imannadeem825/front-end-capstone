@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
+import LogoOne from "../images/capstone2.png"
 import "./Login.css"
 
 
@@ -38,9 +39,10 @@ export const Login = props => {
             </dialog>
 
             <section>
+            <img className="logo__login" src={LogoOne} />	
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Capstone</h1>
-                    <h2>Please sign in</h2>
+                
+                    <h2 className="login__signIn">Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input ref={email} type="email"
@@ -50,8 +52,8 @@ export const Login = props => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
-                            Sign in
+                        <button className="signIn__button" type="submit">
+                            Sign In
                         </button>
                     </fieldset>
                 </form>

@@ -1,0 +1,22 @@
+/* login form  */
+
+.form--login {
+    color: navy;
+    margin-top: 1em;
+    font-family: "Playfair Display";
+    background-color: #ADE4FC;
+}
+
+.logo__login {
+    width: 50%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.songForm {
+    background-color: #ADE4FC;
+    margin: 1em;
+}

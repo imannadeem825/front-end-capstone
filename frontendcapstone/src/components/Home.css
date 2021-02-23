@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.background__image {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 30em;
+} 
+
+.home__userDiv {
+    color: navy;
+    font-family: "Playfair Display";
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    margin: 2em;
+}
+
+.logo {
+    width: 50%;
+    margin-left: 4em;
+    align-self: center;
+}
